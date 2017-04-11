@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.uucode.net/custom/schema/calculator"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:beans="http://www.springframework.org/schema/beans"
+targetNamespace="http://www.uucode.net/custom/schema/calculator"
+elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xsd:import namespace="http://www.springframework.org/schema/beans" />
+    <xsd:element name="calculator">
+    <xsd:complexType>
+        <xsd:complexContent>
+            <xsd:extension base="beans:identifiedType">
+                <xsd:attribute name="number1" type="xsd:decimal" />
+                <xsd:attribute name="number2" type="xsd:decimal" />
+                <xsd:attribute name="operator" type="xsd:string" />
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:calculator="http://www.uucode.net/custom/schema/calculator"
+	xmlns:scope="http://www.adamfei.com/custom/schema/thread"
+	xsi:schemaLocation=
+	   "http://www.springframework.org/schema/beans
+    	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.uucode.net/custom/schema/calculator
+        http://www.uucode.net/custom/schema/calculator.xsd
+        http://www.adamfei.com/custom/schema/thread
+        http://www.adamfei.com/custom/schema/thread.xsd">
+
+	<scope:thread id="thread" class="org.springframework.context.support.SimpleThreadScope" />
+
+	<bean id="helloBean" class="ch5.homework.HelloWorld" scope="thread">
+		<property name="name" value="Mkyong" />
+	</bean>
+
+</beans>
