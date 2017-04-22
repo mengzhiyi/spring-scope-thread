@@ -68,5 +68,19 @@
 		    <version>1.10</version>
 		</dependency>
     	
+    	<dependency>
+		    <groupId>org.objenesis</groupId>
+		    <artifactId>objenesis</artifactId>
+		    <version>2.5.1</version>
+		   	<description>A library for instantiating Java objects</description>
+		</dependency>
+    	
+    	<dependency>
+		    <groupId>cglib</groupId>
+		    <artifactId>cglib</artifactId>
+		    <version>3.2.5</version>
+		    <description>Cglib</description>
+		</dependency>
+    	
   </dependencies>
 </project>

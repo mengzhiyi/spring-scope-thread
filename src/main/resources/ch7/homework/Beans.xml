@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id="dbQuery" class="ch7.homework.query.DBQuery">
+   </bean>
+
+   <bean id="fileQuery" class="ch7.homework.query.FileQuery">
+   </bean>
+   
+   <bean id="memoryQuery" class="ch7.homework.query.MemoryQuery">
+   </bean> 
+   
+   <bean id="helloWorld" class="ch7.homework.HelloWorld">
+   		<property name="message" value="hello world"></property>
+   </bean>
+   
+   <bean class="ch7.homework.AopBeanPostProcessor">
+   		<property name="classNameRegex" value="\w{0,}Query\w{0,}"></property>
+   </bean>
+   
+</beans>
