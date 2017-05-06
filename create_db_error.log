@@ -1,0 +1,161 @@
+
+-------
+06/17/2017 17:17:27
+-------
+
+Error executing 'DROP TABLE `account` ' (line 2): Table "ACCOUNT" not found; SQL statement:
+DROP TABLE `account`  [42102-176]
+
+-------
+06/18/2017 17:18:07
+-------
+
+
+-------
+06/18/2017 17:18:57
+-------
+
+
+-------
+06/19/2017 17:19:31
+-------
+
+
+-------
+06/19/2017 17:19:53
+-------
+
+
+-------
+06/21/2017 17:21:49
+-------
+
+
+-------
+06/21/2017 17:21:49
+-------
+
+
+-------
+06/22/2017 17:22:02
+-------
+
+Error executing 'DROP TABLE `account` ' (line 2): Table "ACCOUNT" not found; SQL statement:
+DROP TABLE `account`  [42102-176]
+
+-------
+06/22/2017 17:22:02
+-------
+
+
+-------
+06/22/2017 17:22:15
+-------
+
+Error executing 'DROP TABLE `account` ' (line 2): Table "ACCOUNT" not found; SQL statement:
+DROP TABLE `account`  [42102-176]
+
+-------
+06/22/2017 17:22:15
+-------
+
+
+-------
+06/25/2017 17:25:43
+-------
+
+Error executing 'DROP TABLE `account` ' (line 2): Table "ACCOUNT" not found; SQL statement:
+DROP TABLE `account`  [42102-176]
+
+-------
+06/27/2017 17:27:38
+-------
+
+
+-------
+06/30/2017 17:30:20
+-------
+
+
+-------
+06/31/2017 17:31:25
+-------
+
+Error executing 'CREATE TABLE `account` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `money` double DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)   ' (line 9): Table "ACCOUNT" already exists; SQL statement:
+CREATE TABLE `account` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `money` double DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)    [42101-176]
+Error executing 'INSERT INTO `account` VALUES ('1', 'aaa', '1000') ' (line 11): Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.ACCOUNT(ID)"; SQL statement:
+INSERT INTO `account` VALUES ('1', 'aaa', '1000')  [23505-176]
+Error executing 'INSERT INTO `account` VALUES ('2', 'bbb', '1000') ' (line 12): Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.ACCOUNT(ID)"; SQL statement:
+INSERT INTO `account` VALUES ('2', 'bbb', '1000')  [23505-176]
+Error executing 'INSERT INTO `account` VALUES ('3', 'ccc', '1000') ' (line 13): Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.ACCOUNT(ID)"; SQL statement:
+INSERT INTO `account` VALUES ('3', 'ccc', '1000')  [23505-176]
+
+-------
+06/33/2017 17:33:45
+-------
+
+
+-------
+06/34/2017 17:34:35
+-------
+
+
+-------
+06/35/2017 17:35:28
+-------
+
+
+-------
+06/39/2017 17:39:47
+-------
+
+
+-------
+06/40/2017 17:40:04
+-------
+
+
+-------
+06/40/2017 17:40:46
+-------
+
+
+-------
+06/42/2017 17:42:04
+-------
+
+
+-------
+06/42/2017 17:42:34
+-------
+
+
+-------
+06/45/2017 17:45:31
+-------
+
+
+-------
+06/46/2017 17:46:55
+-------
+
+
+-------
+06/48/2017 17:48:58
+-------
+
+
+-------
+06/49/2017 17:49:52
+-------
+

@@ -20,14 +20,14 @@ public class EncryptablePropertyPlaceholderConfigurer extends PropertyPlaceholde
         if (isEncryptProp(propertyName))  
         {  
             String decryptValue = "";
-			try {
-				decryptValue = DESUtils.decrypt(propertyValue);
-				System.out.println(decryptValue);  
-			} catch (IOException e) {
-				e.printStackTrace();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}  
+//			try {
+//				decryptValue = DESUtils.decrypt(propertyValue);
+//				System.out.println(decryptValue);  
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}  
 			return decryptValue;  
         }else {  
             return propertyValue;  
