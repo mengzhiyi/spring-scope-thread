@@ -1,0 +1,12 @@
+@startuml
+interface Converter
+interface ConverterRegistry
+interface FormatterRegistry
+interface Formatter
+DefaultConversionService -|> ConverterRegistry
+DefaultConversionService *-- Converter
+FormattingConversionService --|> ConverterRegistry
+FormattingConversionService --|> FormatterRegistry
+FormattingConversionService ..> Formatter
+FormattingConversionService ..> Converter
+@enduml

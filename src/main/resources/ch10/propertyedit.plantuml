@@ -1,0 +1,7 @@
+@startuml
+interface PropertyEditor
+interface PropertyEditorRegistry
+PropertyEditor -* PropertyEditorRegistrySupport
+PropertyEditorRegistry <|--PropertyEditorRegistrySupport
+PropertyEditorRegistrySupport <|-- BeanWrapperImpl
+@enduml

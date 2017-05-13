@@ -1,0 +1,6 @@
+@startuml
+interface Converter
+interface ConverterRegistry
+DefaultConversionService -|> ConverterRegistry
+DefaultConversionService *-- Converter
+@enduml

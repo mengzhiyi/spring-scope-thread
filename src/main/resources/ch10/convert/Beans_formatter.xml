@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+http://www.springframework.org/schema/util 
+http://www.springframework.org/schema/util/spring-util-3.0.xsd
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+
+	<bean id="t" class="ch10.convert.Team">
+		<property name="id">
+		<value type="int">10</value>
+		</property>
+		<property name="names" value="a,b,c,d" />
+		<property name="leader" value="geym" />
+		<property name="memberCount" value="c:0010" />
+		<property name="createDate" value="20150126"/>
+		<property name="viceLeader" ref="viceLeader"/>
+	</bean>
+
+	<bean id="viceLeader" class="ch10.convert.Member">
+		<property name="name" value="Bill" />
+		<property name="code" value="0x01 0x02 0x03"></property>
+	</bean>
+	
+	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="customEditors">
+			<map>
+				<entry key="java.util.List" value="ch10.convert.ListTypeEditSupport" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="conversionService"
+		class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="registerDefaultFormatters" value="false" />
+		<property name="formatters">
+			<set>
+				<bean
+					class="org.springframework.format.number.NumberFormatAnnotationFormatterFactory" />
+				<bean class="ch10.convert.MemberFormatter" />
+				<bean class="ch10.convert.ByteArrayFormatter" />
+			</set>
+		</property>
+		<property name="formatterRegistrars">
+			<set>
+				<bean
+					class="org.springframework.format.datetime.joda.JodaTimeFormatterRegistrar">
+					<property name="dateFormatter">
+						<bean
+							class="org.springframework.format.datetime.joda.DateTimeFormatterFactoryBean">
+							<property name="pattern" value="yyyyMMdd" />
+						</bean>
+					</property>
+				</bean>
+			</set>
+		</property>
+	</bean>
+</beans>

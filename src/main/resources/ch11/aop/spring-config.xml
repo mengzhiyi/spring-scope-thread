@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       ">
+
+    <bean id="myBean" class="ch11.aop.HelloService">
+        <property name="target" ref="target"/>
+    </bean>
+
+    <bean id="target" class="ch11.aop.Target"/>
+    <bean id="myAspect" class="ch11.aop.LoggerBeforeAdvice2"/>
+
+        
+    <aop:config proxy-target-class="true">
+        <aop:aspect ref="myAspect">
+            <aop:before method="before" pointcut="execution(* ch11.aop.Target.sayHello*(..))"/>
+        </aop:aspect>
+    </aop:config>
+
+</beans>
