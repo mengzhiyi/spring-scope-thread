@@ -11,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class CircularityMain2 {
 	public static void main(String[] args) {
 		final ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(
-				"geym/dg/ch11/circularity/Beans2.xml");
+				"ch11/circularity/Beans2.xml");
 		System.out.println(context.getBean(CircularityA.class));
 	}
 }
